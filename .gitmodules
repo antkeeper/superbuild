@@ -13,3 +13,6 @@
 [submodule "modules/SDL2"]
 	path = modules/SDL2
 	url = git@cjhoward.org:SDL2.git
+[submodule "modules/glfw"]
+	path = modules/glfw
+	url = git@cjhoward.org:glfw.git
