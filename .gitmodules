@@ -10,3 +10,6 @@
 [submodule "modules/antkeeper-data"]
 	path = modules/antkeeper-data
 	url = git@cjhoward.org:antkeeper-data.git
+[submodule "modules/SDL2"]
+	path = modules/SDL2
+	url = git@cjhoward.org:SDL2.git
