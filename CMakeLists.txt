@@ -117,9 +117,22 @@ ExternalProject_Add(entt
 
 # Build antkeeper-source module
 ExternalProject_Add(antkeeper-source
-	DEPENDS vmq entt
+	DEPENDS openal-soft vmq entt
 	SOURCE_DIR ${MODULE_SOURCE_DIR}/antkeeper-source
 	BINARY_DIR ${MODULE_BUILD_DIR}/antkeeper-source
+	INSTALL_DIR ${PACKAGE_INSTALL_DIR}
+	CMAKE_ARGS
+		"-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
+		"-DCMAKE_INSTALL_PREFIX=${PACKAGE_INSTALL_DIR}"
+		"-DPACKAGE_PLATFORM=${PACKAGE_PLATFORM}"
+		"-DCMAKE_PREFIX_PATH=${MODULE_INSTALL_DIR}"
+	BUILD_ALWAYS 1)
+
+# Build antkeeper-data module
+ExternalProject_Add(antkeeper-data
+	DEPENDS antkeeper-source
+	SOURCE_DIR ${MODULE_SOURCE_DIR}/antkeeper-data
+	BINARY_DIR ${MODULE_BUILD_DIR}/antkeeper-data
 	INSTALL_DIR ${PACKAGE_INSTALL_DIR}
 	CMAKE_ARGS
 		"-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
