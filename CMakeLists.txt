@@ -103,7 +103,7 @@ ExternalProject_Add(vmq
 		"-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
 		"-DCMAKE_INSTALL_PREFIX=${MODULE_INSTALL_DIR}"
 		"-DBUILD_EXAMPLES=OFF"
-	BUILD_ALWAYS 0)
+	BUILD_ALWAYS 1)
 
 # Build EnTT module
 ExternalProject_Add(entt
