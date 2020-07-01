@@ -5,8 +5,8 @@ endif()
 
 cmake_minimum_required(VERSION 3.7)
 
-# Get software package name and version
-include(${CMAKE_SOURCE_DIR}/modules/antkeeper-source/cmake/project.cmake)
+# Create superbuild project
+project(antkeeper-superbuild VERSION "0.0.1")
 
 # Setup package variables
 set(PACKAGE_NAME ${PROJECT_NAME})
@@ -34,9 +34,6 @@ else()
 		message(FATAL_ERROR "Compiler architecture is 64-bit but target architecture is 32-bit.")
 	endif()
 endif()
-
-# Create superbuild project
-project(${PACKAGE_NAME}-superbuild VERSION ${PACKAGE_VERSION})
 
 # Options
 set(BLENDER "blender" CACHE FILEPATH "Path to Blender executable")
@@ -146,6 +143,7 @@ ExternalProject_Add(antkeeper-source
 		"-DCMAKE_INSTALL_PREFIX=${PACKAGE_INSTALL_DIR}"
 		"-DPACKAGE_PLATFORM=${PACKAGE_PLATFORM}"
 		"-DCMAKE_PREFIX_PATH=${MODULE_INSTALL_DIR}"
+		"-DVERSION_STRING=${PROJECT_VERSION}"
 	BUILD_ALWAYS 1)
 
 # Build antkeeper-data module
