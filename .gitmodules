@@ -3,4 +3,4 @@
 	url = https://github.com/antkeeper/antkeeper-source.git
 [submodule "modules/antkeeper-data"]
 	path = modules/antkeeper-data
-	url = https://github.com/antkeeper/antkeeper-data.gits
+	url = https://github.com/antkeeper/antkeeper-data.git
