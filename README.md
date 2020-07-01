@@ -1,10 +1,12 @@
 # Antkeeper Superbuild
 
+This repository contains a CMake superbuild system and all dependencies required to build Antkeeper.
+
 ## Download
 
-Use Git to download the `antkeeper-superbuild` repository and all of its submodules:
+Download the `antkeeper-superbuild` repository and all of its Git submodules:
 
-	git clone --recursive git@cjhoward.org:antkeeper-superbuild.git
+	git clone --recursive <repo url>
 
 ## Configuration & Building
 
@@ -29,7 +31,7 @@ Building on GNU/Linux requires CMake, GCC, G++, and GNU Make. Open a terminal in
 
 ### Windows
 
-Building on Windows requires CMake and Visual Studio 2017. Additionally, [NSIS](http://nsis.sourceforge.net/) is required if you want to build a distributable installer program. In order to correctly build for your target architecture, you must use the `x86 Native Tools Command Prompt` or the `x64 Native Tools Command Prompt` for 32-bit and 64-bit applications, respectively. Then navigate to the project root directory and run the following commands:
+Building on Windows requires CMake and Visual Studio Build Tools. Additionally, [NSIS](http://nsis.sourceforge.net/) is required if you want to build a distributable installer program. In order to correctly build for your target architecture, you must use the `x86 Native Tools Command Prompt` or the `x64 Native Tools Command Prompt` for 32-bit and 64-bit applications, respectively. Then navigate to the project root directory and run the following commands:
 
 	cd build\win64
 	cmake ..\.. -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=...
@@ -57,4 +59,4 @@ If any changes have been made to the submodules, commit those first. Each submod
 
 ## License
 
-Antkeeper is made available under the MIT license. See [`LICENSE.md`](./LICENSE.md) for details.
+Antkeeper superbuild is licensed under the GNU General Public License, version 3. For more information, see [`LICENSE.md`](./LICENSE.md).
