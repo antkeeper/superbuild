@@ -1,6 +1,6 @@
 # Antkeeper Superbuild
 
-This repository contains a CMake superbuild system and all dependencies required to build Antkeeper.
+This repository contains the superbuild system and all dependencies required to build Antkeeper.
 
 ## Download
 
