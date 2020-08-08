@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2019 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2020 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -69,12 +69,6 @@ static int Android_ScreenRate      = 0;
 SDL_sem *Android_PauseSem          = NULL;
 SDL_sem *Android_ResumeSem         = NULL;
 SDL_mutex *Android_ActivityMutex   = NULL;
-
-static int
-Android_Available(void)
-{
-    return 1;
-}
 
 static void
 Android_SuspendScreenSaver(_THIS)
@@ -173,7 +167,7 @@ Android_CreateDevice(int devindex)
 
 VideoBootStrap Android_bootstrap = {
     ANDROID_VID_DRIVER_NAME, "SDL Android video driver",
-    Android_Available, Android_CreateDevice
+    Android_CreateDevice
 };
 
 
