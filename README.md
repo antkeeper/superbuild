@@ -4,9 +4,9 @@ This repository contains the superbuild system and all dependencies required to 
 
 ## Download
 
-Download the `antkeeper-superbuild` repository and all of its Git submodules:
+Download the Antkeeper superbuild repository and all of its Git submodules:
 
-	git clone --recursive https://github.com/antkeeper/antkeeper-superbuild.git
+	git clone --recursive https://antkeeper.com/git/antkeeper/superbuild.git
 
 > Note: The `antkeeper-data` submodule contains proprietary game data and is not publicly available. The game can be built without this submodule, but game data is required to play Antkeeper. You can get a copy of the game data by purchasing Antkeeper at [antkeeper.com](https://antkeeper.com/).
 
@@ -16,8 +16,8 @@ CMake is required to configure and build the application. Depending on the targe
 
 | Directory                        | Platform         |
 | :------------------------------- | :--------------- |
-| [build/linux32](./build/linux32) | 32-bit GNU/Linux |
-| [build/linux64](./build/linux64) | 64-bit GNU/Linux |
+| [build/linux32](./build/linux32) | 32-bit Linux     |
+| [build/linux64](./build/linux64) | 64-bit Linux     |
 | [build/win32](./build/win32)     | 32-bit Windows   |
 | [build/win64](./build/win64)     | 64-bit Windows   |
 
@@ -25,9 +25,9 @@ The following arguments may be passed to CMake during configuration:
 
 	-DCMAKE_BUILD_TYPE // [Debug, Release]
 
-### GNU/Linux
+### Linux
 
-Building for GNU/Linux requires CMake, GCC, G++, and GNU Make. Navigate to either the `build/linux32` or `build/linux64` directory and run the following commands:
+Building for Linux requires CMake, GCC, G++, and GNU Make. Navigate to either the `build/linux32` or `build/linux64` directory and run the following commands:
 
 	cmake ../.. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=...
 	cmake --build .
