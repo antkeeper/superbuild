@@ -1,6 +1,6 @@
 # Antkeeper Superbuild
 
-This repository contains the superbuild system and all dependencies required to build Antkeeper.
+This repository contains the superbuild system and all dependencies required to build [Antkeeper](https://antkeeper.com/).
 
 ## Download
 
@@ -8,18 +8,18 @@ Download the Antkeeper superbuild repository and all of its Git submodules:
 
 	git clone --recursive https://antkeeper.com/git/antkeeper/superbuild.git
 
-> Note: The `antkeeper-data` submodule contains proprietary game data and is not publicly available. The game can be built without this submodule, but game data is required to play Antkeeper. You can get a copy of the game data by purchasing Antkeeper at [antkeeper.com](https://antkeeper.com/).
+> Note: The [antkeeper-data](modules/antkeeper-data) submodule contains proprietary game data and is not publicly available. The game can be built without this submodule, but the game data is required to play Antkeeper. You can get a copy of the game data by purchasing Antkeeper at [antkeeper.com](https://antkeeper.com/).
 
 ## Configuration & Building
 
 CMake is required to configure and build the application. Depending on the target platform, CMake should be invoked from one of the following directories:
 
-| Directory                        | Platform         |
-| :------------------------------- | :--------------- |
-| [build/linux32](./build/linux32) | 32-bit Linux     |
-| [build/linux64](./build/linux64) | 64-bit Linux     |
-| [build/win32](./build/win32)     | 32-bit Windows   |
-| [build/win64](./build/win64)     | 64-bit Windows   |
+| Directory                      | Platform         |
+| :----------------------------- | :--------------- |
+| [build/linux32](build/linux32) | 32-bit Linux     |
+| [build/linux64](build/linux64) | 64-bit Linux     |
+| [build\win32](build/win32)     | 32-bit Windows   |
+| [build\win64](build/win64)     | 64-bit Windows   |
 
 The following arguments may be passed to CMake during configuration:
 
@@ -27,14 +27,14 @@ The following arguments may be passed to CMake during configuration:
 
 ### Linux
 
-Building for Linux requires CMake, GCC, G++, and GNU Make. Navigate to either the `build/linux32` or `build/linux64` directory and run the following commands:
+Building for Linux requires CMake, GCC, G++, and GNU Make. Navigate to either the [build/linux32](build/linux32) or [build/linux64](build/linux64) directory and run the following commands:
 
 	cmake ../.. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=...
 	cmake --build .
 
 ### Windows
 
-Building for Windows requires CMake and Visual Studio Build Tools. Additionally, [NSIS](http://nsis.sourceforge.net/) is required if you want to build a distributable installer program. In order to correctly build for your target architecture, you must use the `x86 Native Tools Command Prompt` or the `x64 Native Tools Command Prompt` for 32-bit and 64-bit applications, respectively. Then navigate to either the `build\win32` or `build\win64` directory and run the following commands:
+Building for Windows requires CMake and Visual Studio Build Tools. Additionally, [NSIS](http://nsis.sourceforge.net/) is required if you want to build a distributable installer program. In order to correctly build for your target architecture, you must use the `x86 Native Tools Command Prompt` or the `x64 Native Tools Command Prompt` for 32-bit and 64-bit applications, respectively. Then navigate to either the [build\win32](build/win32) or [build\win64](build/win64) directory and run the following commands:
 
 	cmake ..\.. -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=...
 	cmake --build .
@@ -59,22 +59,22 @@ If any changes have been made to the submodules, commit those first. Each submod
 
 ## License
 
-Antkeeper superbuild is licensed under the GNU General Public License, version 3. For more information, see [`LICENSE.md`](./LICENSE.md).
+Antkeeper superbuild is licensed under the GNU General Public License, version 3. For more information, see [`LICENSE.md`](LICENSE.md).
 
 ### 3rd-Party Software
 
-| Name                            | Author(s)              | License                     | File(s)                                                             |
-| :------------------------------ | :--------------------- | :-------------------------- | :------------------------------------------------------------------ |
-| cxxopts                         | Jarryd Beck            | MIT                         | [cxxopts.hpp](./modules/cxxopts/include/cxxopts.hpp)                |
-| dirent                          | Toni Ronkko            | MIT                         | [dirent.h](./modules/dirent/include/dirent.h)                       |
-| dr_wav                          | David Reid             | Public Domain (Unlicense)   | [dr_wav.h](./modules/dr_wav/dr_wav.h)                               |
-| Easing Functions (Equations)    | Robert Penner          | MIT                         | [ease.hpp](./modules/antkeeper-source/src/animation/ease.hpp)       |
-| EnTT                            | Michele Caini          | MIT                         | [entt/*](./modules/entt/)                                           |
-| khrplatform.h                   | The Khronos Group Inc. | MIT                         | [khrplatform.h](./modules/glad/khrplatform.h)                       |
-| OpenGL loader generated by glad | David Herberth         | Public Domain / WTFPL / CC0 | [glad.h](./modules/glad/glad.h), [glad.c](./modules/glad/glad.c)    |
-| PhysicsFS                       | Ryan C. Gordon         | Zlib                        | [physfs/*](./modules/physfs/)                                       |
-| JSON for Modern C++             | Niels Lohmann          | MIT                         | [json.hpp](./modules/nlohmann/json.hpp)                             |
-| OpenAL Soft                     |                        | LGPL-2.0                    | [openal-soft/*](./modules/openal-soft/)                             |
-| Simple DirectMedia Layer        | Sam Lantinga           | Zlib                        | [SDL2/*](./modules/SDL2/)                                           |
-| stb_image                       | Sean Barrett           | MIT / Public Domain         | [stb_image.h](./modules/stb/stb_image.h)                            |
-| stb_image_write                 | Sean Barrett           | MIT / Public Domain         | [stb_image_write.h](./modules/stb/stb_image_write.h)                |
+| Name                            | Author(s)              | License                     | File(s)                                                      |
+| :------------------------------ | :--------------------- | :-------------------------- | :----------------------------------------------------------- |
+| cxxopts                         | Jarryd Beck            | MIT                         | [cxxopts.hpp](modules/cxxopts/include/cxxopts.hpp)           |
+| dirent                          | Toni Ronkko            | MIT                         | [dirent.h](modules/dirent/include/dirent.h)                  |
+| dr_wav                          | David Reid             | Public Domain (Unlicense)   | [dr_wav.h](modules/dr_wav/dr_wav.h)                          |
+| Easing Functions (Equations)    | Robert Penner          | MIT                         | [ease.hpp](modules/antkeeper-source/src/animation/ease.hpp)  |
+| EnTT                            | Michele Caini          | MIT                         | [entt/*](modules/entt/)                                      |
+| khrplatform.h                   | The Khronos Group Inc. | MIT                         | [khrplatform.h](modules/glad/khrplatform.h)                  |
+| OpenGL loader generated by glad | David Herberth         | Public Domain / WTFPL / CC0 | [glad.h](modules/glad/glad.h), [glad.c](modules/glad/glad.c) |
+| PhysicsFS                       | Ryan C. Gordon         | Zlib                        | [physfs/*](modules/physfs/)                                  |
+| JSON for Modern C++             | Niels Lohmann          | MIT                         | [json.hpp](modules/nlohmann/json.hpp)                        |
+| OpenAL Soft                     |                        | LGPL-2.0                    | [openal-soft/*](modules/openal-soft/)                        |
+| Simple DirectMedia Layer        | Sam Lantinga           | Zlib                        | [SDL2/*](modules/SDL2/)                                      |
+| stb_image                       | Sean Barrett           | MIT / Public Domain         | [stb_image.h](modules/stb/stb_image.h)                       |
+| stb_image_write                 | Sean Barrett           | MIT / Public Domain         | [stb_image_write.h](modules/stb/stb_image_write.h)           |
