@@ -8,7 +8,7 @@ Download the Antkeeper superbuild repository and all of its Git submodules:
 
 	git clone --recursive https://antkeeper.com/git/antkeeper/superbuild.git
 
-> Note: The [antkeeper-data](modules/antkeeper-data) submodule contains proprietary game data and is not publicly available. The game can be built without this submodule, but the game data is required to play Antkeeper. You can get a copy of the game data by purchasing Antkeeper at [antkeeper.com](https://antkeeper.com/).
+> Note: The `antkeeper-data` submodule contains proprietary game data and is not publicly available. The game can be built without this submodule, but the game data is required to play Antkeeper. You can get a copy of the game data by purchasing Antkeeper at [antkeeper.com](https://antkeeper.com/).
 
 ## Configuration & Building
 
